@@ -27,11 +27,11 @@ void SnakeScene::initializeMap(void)
 {
     std::srand(std::time(nullptr));
     for (int i = 0; i < 32; ++i)
-        for (int j = 0; j < 32; ++j)
+        for (int j = 0; j < 25; ++j)
             this->_map[i][j] = std::make_shared<Void>();
     for (int i = 0, x = 0, y = 0; i < 10; ++i) {
         x = std::rand() % 32;
-        y = std::rand() % 32;
+        y = std::rand() % 25;
         this->_map[x][y] = std::make_shared<Coin>();
     }
 }
@@ -39,7 +39,7 @@ void SnakeScene::initializeMap(void)
 void SnakeScene::updateSnakePos()
 {
     for (int i = 0; i < 32; ++i)
-        for (int j = 0; j < 32; ++j)
+        for (int j = 0; j < 25; ++j)
             if (this->_map[i][j]->getName() == "Snake")
                 this->_map[i][j] = std::make_shared<Void>();
     for (int i = 0; i < this->_snake.size(); ++i)
@@ -57,7 +57,7 @@ void SnakeScene::growSnake(std::vector<std::shared_ptr<Snake> > &new_snake, Vect
     if (this->_map[new_pos.y][new_pos.x]->getName() != "coin")
         new_snake.pop_back();
     else {
-        this->_map[std::rand() / ((RAND_MAX + 1u) / 24)][std::rand() / ((RAND_MAX + 1u) / 24)] = std::make_shared<Coin>();
+        this->_map[std::rand() % 32][std::rand() % 25] = std::make_shared<Coin>();
     }
     this->_snake = new_snake;
     updateSnakePos();
@@ -65,9 +65,11 @@ void SnakeScene::growSnake(std::vector<std::shared_ptr<Snake> > &new_snake, Vect
 
 void SnakeScene::update(const std::string &input)
 {
-    std::array<int, 2> dir;
+    std::array<int, 2> dir = {0, 0};
 
-    if (this->_directionInterpreter.find(input) != this->_directionInterpreter.end())
+    if (this->_directionInterpreter.find(input) != this->_directionInterpreter.end() && \
+    (input == "up" && this->_lastInput != "down") || (input == "down" && this->_lastInput != "up") || \
+    (input == "left" && this->_lastInput != "right") || (input == "right" && this->_lastInput != "left"))
         this->_lastInput = input;
     dir = this->_directionInterpreter[this->_lastInput];
     this->_snake[0]->unsetHead();
@@ -75,7 +77,7 @@ void SnakeScene::update(const std::string &input)
         this->_snake[0]->getPos().x + dir[0],
         this->_snake[0]->getPos().y + dir[1]
     );
-    if (new_pos.x < 0 || new_pos.x >= 28 || new_pos.y < 0 || new_pos.y >= 32) {
+    if (new_pos.x < 0 || new_pos.x >= 25 || new_pos.y < 0 || new_pos.y >= 32) {
         this->_isDead = true;
         return;
     }
@@ -92,7 +94,7 @@ const std::vector<std::string> &SnakeScene::getTextures()
 void SnakeScene::drawBoard(void)
 {
     for (int i = 0; i < 32; i++) {
-        for (int j = 0; j < 24; j++) {
+        for (int j = 0; j < 25; j++) {
             if (this->_map[i][j] != nullptr) {
                 this->_instructions.push_back(
                     "rectangle "

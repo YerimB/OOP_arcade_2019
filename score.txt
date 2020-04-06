@@ -90,3 +90,14 @@ nibbler | 'klm' | 310
 nibbler | 'klm' | 250
 nibbler | 'klm' | 330
 pacman | 'klm' | 2700
+nibbler | 'klm' | 50
+nibbler | 'klm' | 10
+nibbler | 'klm' | 70
+nibbler | 'klm' | 840
+nibbler | 'retago' | 520
+nibbler | 'retago' | 810
+nibbler | 'klm' | 50
+nibbler | 'klm' | 20
+nibbler | 'klm' | 130
+nibbler | 'klm' | 70
+nibbler | 'klm' | 200

@@ -155,8 +155,8 @@ void LibOpenGL::drawRectangle(const Rectangle<int> &rect, const std::string &col
 
     this->_gameMode = true;
     if (color.find(":") == std::string::npos) {
-        this->_objects["wall.jpg"]->setPosition(glm::vec3(pos_x / 2, -2.0, pos_z));
-        this->_objects["wall.jpg"]->draw(
+        this->_objects["sandstone.png"]->setPosition(glm::vec3(pos_x / 2, -2.0, pos_z));
+        this->_objects["sandstone.png"]->draw(
             GL_TRIANGLES,
             this->_manager->getPerspectiveMatrix(),
             (*this->_camera)
@@ -194,10 +194,10 @@ const std::string LibOpenGL::handleEvent(void)
 
 void LibOpenGL::loadTextures(std::vector<std::string> textures)
 {
-    this->_objects["wall.jpg"] = std::make_shared<Cube>();
-    this->_objects["wall.jpg"]->setScalation(glm::vec3(2.0, 2.0, 2.0));
-    this->_objects["wall.jpg"]->setShader(*this->_shader, this->_manager->getPerspectiveMatrix());
-    this->_objects["wall.jpg"]->setTexture(std::make_shared<Texture>("lib/assets/textures/wall.jpg"));
+    this->_objects["sandstone.png"] = std::make_shared<Cube>();
+    this->_objects["sandstone.png"]->setScalation(glm::vec3(2.0, 2.0, 2.0));
+    this->_objects["sandstone.png"]->setShader(*this->_shader, this->_manager->getPerspectiveMatrix());
+    this->_objects["sandstone.png"]->setTexture(std::make_shared<Texture>("lib/assets/textures/sandstone.png"));
     for (std::string name : textures) {
         this->_objects[name] = std::make_shared<Cube>();
         if (name == "bricks.png")
