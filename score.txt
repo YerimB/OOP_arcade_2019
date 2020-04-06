@@ -85,3 +85,8 @@ nibbler | 'klm' | 330
 nibbler | 'klm' | 10
 nibbler | 'klm' | 10
 nibbler | 'kml' | 10
+nibbler | 'klm' | 350
+nibbler | 'klm' | 310
+nibbler | 'klm' | 250
+nibbler | 'klm' | 330
+pacman | 'klm' | 2700

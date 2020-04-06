@@ -1,15 +1,18 @@
-//
-// Created by Yuno on 05/03/2020.
-//
+/*
+** EPITECH PROJECT, 2020
+** OOP_arcade_2019
+** File description:
+** Coin
+*/
 
 #include "Coin.hpp"
 
-std::string Coin::getColor()
+const std::string Coin::getColor(void) const
 {
     return "yellow:grape.jpg°0";
 }
 
-std::string Coin::getName()
+const std::string Coin::getName(void) const
 {
     return "coin";
 }

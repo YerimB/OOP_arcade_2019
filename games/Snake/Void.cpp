@@ -1,15 +1,18 @@
-//
-// Created by Yuno on 05/03/2020.
-//
+/*
+** EPITECH PROJECT, 2020
+** OOP_arcade_2019
+** File description:
+** Void
+*/
 
 #include "Void.hpp"
 
-std::string Void::getColor()
+const std::string Void::getColor(void) const
 {
     return "white";
 }
 
-std::string Void::getName()
+const std::string Void::getName(void) const
 {
     return "void";
 }

@@ -30,19 +30,19 @@ void SnakeScene::initializeMap(void)
         for (int j = 0; j < 32; ++j)
             this->_map[i][j] = std::make_shared<Void>();
     for (int i = 0, x = 0, y = 0; i < 10; ++i) {
-        x = std::rand() / ((RAND_MAX + 1u) / 32);
-        y = std::rand() / ((RAND_MAX + 1u) / 32);
+        x = std::rand() % 32;
+        y = std::rand() % 32;
         this->_map[x][y] = std::make_shared<Coin>();
     }
 }
 
 void SnakeScene::updateSnakePos()
 {
-    for (int i = 0; i < 32; i++)
-        for (int j = 0; j < 32; j++)
+    for (int i = 0; i < 32; ++i)
+        for (int j = 0; j < 32; ++j)
             if (this->_map[i][j]->getName() == "Snake")
                 this->_map[i][j] = std::make_shared<Void>();
-    for (int i = 0; i < this->_snake.size(); i++)
+    for (int i = 0; i < this->_snake.size(); ++i)
         this->_map[this->_snake[i]->getPos().y][this->_snake[i]->getPos().x] = this->_snake[i];
 }
 
@@ -65,9 +65,11 @@ void SnakeScene::growSnake(std::vector<std::shared_ptr<Snake> > &new_snake, Vect
 
 void SnakeScene::update(const std::string &input)
 {
+    std::array<int, 2> dir;
+
     if (this->_directionInterpreter.find(input) != this->_directionInterpreter.end())
         this->_lastInput = input;
-    std::array<int, 2> dir = this->_directionInterpreter[this->_lastInput];
+    dir = this->_directionInterpreter[this->_lastInput];
     this->_snake[0]->unsetHead();
     Vector2<int> new_pos(
         this->_snake[0]->getPos().x + dir[0],
