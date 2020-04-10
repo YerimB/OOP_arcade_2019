@@ -147,12 +147,10 @@ void Manager::ExecuteInstructions(void)
         this->ChangeLibrary(this->_event);
         return;
     }
-    if (this->_event.find("text: ") < this->_event.length())
-    {
+    if (this->_event.find("text: ") < this->_event.length()) {
         this->_username = this->_event.substr(6);
         this->_instructions = _launcher->getInstructions("e");
-    }
-    else if (!this->_launched)
+    } else if (!this->_launched)
         this->_instructions = _launcher->getInstructions(this->_event);
     else
         this->_instructions = this->_gameCore->getInstruction(this->_event);
@@ -167,12 +165,9 @@ void Manager::ExecuteInstructions(void)
         } else if (this->_instructionType == "getstr") {
             this->GetInstance().enterTextMode();
             continue;
-        }
-        if (this->_instructionType == "score") {
-            std::cout << "score" << std::endl;
+        } else if (this->_instructionType == "score")
             updateScore(inst);
-        }
-        if (this->_instructionType == "text") {
+        else if (this->_instructionType == "text") {
             inst = inst.substr(inst.find("'") + 1, inst.length());
             this->_textToWrite = inst.substr(0, inst.find("'"));
             inst = inst.substr(inst.find("'") + 2, inst.length());

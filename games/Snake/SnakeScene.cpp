@@ -86,7 +86,7 @@ void SnakeScene::update(const std::string &input)
     growSnake(new_snake, new_pos);
 }
 
-const std::vector<std::string> &SnakeScene::getTextures()
+const std::vector<std::string> &SnakeScene::getTextures(void) const
 {
     return (this->_textures);
 }
@@ -116,14 +116,12 @@ const std::vector<std::string> &SnakeScene::sendInstruction(void)
     if (this->_isDead) {
         this->_instructions.push_back("text 'you are dead' 75 25 red");
         if (!this->_scoreEntered) {
-            this->_scoreEntered = true;
             this->_instructions.push_back("score " + std::to_string(this->_snake.size() * 10));
+            this->_scoreEntered = true;
         }
         return this->_instructions;
     }
     this->drawBoard();
-    this->_instructions.push_back("text 'score: " + \
-    std::to_string(this->_snake.size() * 10) + "' 145 10 white");
     for (int i = 0; i < 32; i++) {
         for (int j = 0; j < 25; j++) {
             if (this->_map[i][j]->getName() != "void")
@@ -138,6 +136,8 @@ const std::vector<std::string> &SnakeScene::sendInstruction(void)
                 );
         }
     }
+    this->_instructions.push_back("text 'score: " + \
+    std::to_string(this->_snake.size() * 10) + "' 145 10 white");
     return this->_instructions;
 }
 

@@ -29,7 +29,9 @@ GameModule::GameModule(const std::string &path)
  */
 const std::vector<std::string> GameModule::getInstruction(std::string input) const
 {
+    std::cout << "GameLoader: [" << this->_gameLoader.get() << "]" << std::endl;
     this->_gameLoader->GetInstance().update(input);
+    std::cout << "GameLoader: [" << this->_gameLoader.get() << "]" << std::endl;
     return (this->_gameLoader->GetInstance().sendInstruction());
 }
 

@@ -19,7 +19,7 @@ class SnakeScene: public IGame {
         void initializeMap(void) final;
         void drawBoard(void);
         const std::vector<std::string> &sendInstruction() final;
-        const std::vector<std::string> &getTextures() final;
+        const std::vector<std::string> &getTextures(void) const final;
         const std::string getName(void) { return "nibbler"; };
         ~SnakeScene() = default;
 

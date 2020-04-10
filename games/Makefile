@@ -8,7 +8,7 @@
 CC = g++ -std=c++14
 
 PACMAN = ./PacMan/
-SNAKE = ./Snake/
+SNAKE = ./Snake2/
 
 NAME = games
 

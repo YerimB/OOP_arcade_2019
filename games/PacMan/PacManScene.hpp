@@ -25,7 +25,7 @@ class PacManScene: public IGame {
         void drawBoard(void);
         const std::vector<std::string> &sendInstruction(void) final;
         inline const std::string getName() { return "pacman"; };
-        const std::vector<std::string> &getTextures(void) final;
+        const std::vector<std::string> &getTextures(void) const final;
         ~PacManScene() = default;
 
     public: // Game methods

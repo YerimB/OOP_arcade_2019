@@ -67,6 +67,7 @@ void *DynamicLibrary::GetSymbol(void *handle, const std::string &symbol)
 
     if (sym == nullptr)
     {
+        std::cerr << "Failed to get symbol" << std::endl;
         std::exit(84);
     }
 

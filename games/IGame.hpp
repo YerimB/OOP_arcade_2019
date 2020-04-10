@@ -18,7 +18,7 @@
 class IGame {
     public:
         virtual const std::string getName() = 0;
-        virtual const std::vector<std::string> &getTextures(void) = 0;
+        virtual const std::vector<std::string> &getTextures(void) const = 0;
         virtual void initializeMap(void) = 0;
         virtual void update(const std::string &input) = 0;
         virtual const std::vector<std::string> &sendInstruction(void) = 0;

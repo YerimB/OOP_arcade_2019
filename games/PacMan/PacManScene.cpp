@@ -63,7 +63,7 @@ void PacManScene::initializeMap(void)
     myfile.close();
 }
 
-const std::vector<std::string> &PacManScene::getTextures()
+const std::vector<std::string> &PacManScene::getTextures(void) const
 {
     return (this->_textures);
 }
