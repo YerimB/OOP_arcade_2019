@@ -1,0 +1,38 @@
+\hypertarget{class_g_l_manager}{}\section{G\+L\+Manager Class Reference}
+\label{class_g_l_manager}\index{G\+L\+Manager@{G\+L\+Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_l_manager_ad87bda8387bc538bc0c4340501040483}\label{class_g_l_manager_ad87bda8387bc538bc0c4340501040483}} 
+S\+D\+L\+\_\+\+Window $\ast$ {\bfseries get\+Window} (void) const
+\item 
+\mbox{\Hypertarget{class_g_l_manager_abbf99309cf92c7824637604c449f60ca}\label{class_g_l_manager_abbf99309cf92c7824637604c449f60ca}} 
+const glm\+::mat4 \& {\bfseries get\+Perspective\+Matrix} (void) const
+\item 
+\mbox{\Hypertarget{class_g_l_manager_abd3642ffde790a4bd20c182144ac3ef4}\label{class_g_l_manager_abd3642ffde790a4bd20c182144ac3ef4}} 
+void {\bfseries init\+Window} (const std\+::string \&name, const int \&wid=800, const int \&len=600)
+\item 
+\mbox{\Hypertarget{class_g_l_manager_a5d7b1d2c08f4f16d75f968b629f1d3b5}\label{class_g_l_manager_a5d7b1d2c08f4f16d75f968b629f1d3b5}} 
+void {\bfseries set\+Perpective\+Matrix} (const float \&angle, const float \&ratio, const float \&near\+Plane, const float \&far\+Plane)
+\item 
+\mbox{\Hypertarget{class_g_l_manager_a1a3fd00de3c709ab4b81b1a734f971f2}\label{class_g_l_manager_a1a3fd00de3c709ab4b81b1a734f971f2}} 
+void {\bfseries clear\+Window} (const G\+Lclampf \&r=0.\+0f, const G\+Lclampf \&g=0.\+0f, const G\+Lclampf \&b=0.\+0f, const G\+Lclampf \&a=1.\+0f)
+\item 
+\mbox{\Hypertarget{class_g_l_manager_a290e1f4ce2656c82f9eadaf800c4598b}\label{class_g_l_manager_a290e1f4ce2656c82f9eadaf800c4598b}} 
+const std\+::string {\bfseries handle\+Events} (const std\+::map$<$ S\+D\+L\+\_\+\+Keycode, std\+::string $>$ \&keymap, \hyperlink{class_camera}{Camera} \&cam)
+\item 
+\mbox{\Hypertarget{class_g_l_manager_af495168157244aa4f79a5cb96625b077}\label{class_g_l_manager_af495168157244aa4f79a5cb96625b077}} 
+const bool {\bfseries handle\+Key\+Down} (const S\+D\+L\+\_\+\+Keysym \&key, \hyperlink{class_camera}{Camera} \&cam)
+\item 
+\mbox{\Hypertarget{class_g_l_manager_a57d63191667702ad02e057f48f10147d}\label{class_g_l_manager_a57d63191667702ad02e057f48f10147d}} 
+void {\bfseries handle\+Key\+Up} (const S\+D\+L\+\_\+\+Keysym \&key, \hyperlink{class_camera}{Camera} \&cam)
+\item 
+\mbox{\Hypertarget{class_g_l_manager_a342c998f2325bbdd693c817e76b3dced}\label{class_g_l_manager_a342c998f2325bbdd693c817e76b3dced}} 
+const std\+::string {\bfseries get\+Input\+Char} (std\+::string \&to\+Fill)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Open\+G\+L/classes/G\+L\+Manager.\+hpp\item 
+lib/\+Open\+G\+L/classes/G\+L\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{class_d_l_loader}{}\section{D\+L\+Loader$<$ T $>$ Class Template Reference}
+\label{class_d_l_loader}\index{D\+L\+Loader$<$ T $>$@{D\+L\+Loader$<$ T $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_l_loader_ad4c7aee282549ba7064d3b539b9dca68}{D\+L\+Loader} (const std\+::string \&file, const Dynamic\+Library\+::\+Library\+Type \&type=Dynamic\+Library\+::\+Graphic)
+\item 
+T \& \hyperlink{class_d_l_loader_a7a023d81af75b962bddcef178b92e4c4}{Get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Get instance of a Dynamic Library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_l_loader_ad4c7aee282549ba7064d3b539b9dca68}\label{class_d_l_loader_ad4c7aee282549ba7064d3b539b9dca68}} 
+\index{D\+L\+Loader@{D\+L\+Loader}!D\+L\+Loader@{D\+L\+Loader}}
+\index{D\+L\+Loader@{D\+L\+Loader}!D\+L\+Loader@{D\+L\+Loader}}
+\subsubsection{\texorpdfstring{D\+L\+Loader()}{DLLoader()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_d_l_loader}{D\+L\+Loader}$<$ T $>$\+::\hyperlink{class_d_l_loader}{D\+L\+Loader} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const Dynamic\+Library\+::\+Library\+Type \&}]{type = {\ttfamily DynamicLibrary\+:\+:Graphic} }\end{DoxyParamCaption})}
+
+Create and load an instance of a dynamic library
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Path to dynamic library \\
+\hline
+{\em type} & Dynamic library type (Graphic or Game) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_l_loader_a7a023d81af75b962bddcef178b92e4c4}\label{class_d_l_loader_a7a023d81af75b962bddcef178b92e4c4}} 
+\index{D\+L\+Loader@{D\+L\+Loader}!Get\+Instance@{Get\+Instance}}
+\index{Get\+Instance@{Get\+Instance}!D\+L\+Loader@{D\+L\+Loader}}
+\subsubsection{\texorpdfstring{Get\+Instance()}{GetInstance()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \hyperlink{class_d_l_loader}{D\+L\+Loader}$<$ T $>$\+::Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get instance of a Dynamic Library. 
+
+If the instance is null, an \hyperlink{class_arcade_exception}{Arcade\+Exception} is thrown.
+
+\begin{DoxyReturn}{Returns}
+A reference of type T to the instance of the Dynamic Library 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\+D\+L\+Loader/D\+L\+Loader.\+hpp\item 
+core/\+D\+L\+Loader/D\+L\+Loader.\+cpp\end{DoxyCompactItemize}

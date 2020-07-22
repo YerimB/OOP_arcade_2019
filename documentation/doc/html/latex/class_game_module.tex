@@ -1,0 +1,85 @@
+\hypertarget{class_game_module}{}\section{Game\+Module Class Reference}
+\label{class_game_module}\index{Game\+Module@{Game\+Module}}
+Inheritance diagram for Game\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_module}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_module_a9d2cc872e80e4107d7f87818e9ea5455}{Game\+Module} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_module}{Game\+Module} constructor. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \hyperlink{class_game_module_ab82644e3a4e4a5aa41c4f8e9c6077af7}{get\+Instruction} (std\+::string input) const
+\begin{DoxyCompactList}\small\item\em Get instructions to execute from the game. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \hyperlink{class_game_module_a54c7d41e2ddf42b1c46846f2653ad746}{get\+Textures} (void) const
+\begin{DoxyCompactList}\small\item\em Get textures from the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_module_a475400a8ee4a8183e3639c6cbeda47b1}\label{class_game_module_a475400a8ee4a8183e3639c6cbeda47b1}} 
+const std\+::string {\bfseries get\+Name} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_module_a9d2cc872e80e4107d7f87818e9ea5455}\label{class_game_module_a9d2cc872e80e4107d7f87818e9ea5455}} 
+\index{Game\+Module@{Game\+Module}!Game\+Module@{Game\+Module}}
+\index{Game\+Module@{Game\+Module}!Game\+Module@{Game\+Module}}
+\subsubsection{\texorpdfstring{Game\+Module()}{GameModule()}}
+{\footnotesize\ttfamily Game\+Module\+::\+Game\+Module (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_game_module}{Game\+Module} constructor. 
+
+Load the game passed as parameter using \hyperlink{class_d_l_loader}{D\+L\+Loader}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the game library .so\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New instance of \hyperlink{class_game_module}{Game\+Module} 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_module_ab82644e3a4e4a5aa41c4f8e9c6077af7}\label{class_game_module_ab82644e3a4e4a5aa41c4f8e9c6077af7}} 
+\index{Game\+Module@{Game\+Module}!get\+Instruction@{get\+Instruction}}
+\index{get\+Instruction@{get\+Instruction}!Game\+Module@{Game\+Module}}
+\subsubsection{\texorpdfstring{get\+Instruction()}{getInstruction()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ Game\+Module\+::get\+Instruction (\begin{DoxyParamCaption}\item[{std\+::string}]{input }\end{DoxyParamCaption}) const}
+
+
+
+Get instructions to execute from the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & User input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A std\+::vector$<$std\+::string$>$ containing instructions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_module_a54c7d41e2ddf42b1c46846f2653ad746}\label{class_game_module_a54c7d41e2ddf42b1c46846f2653ad746}} 
+\index{Game\+Module@{Game\+Module}!get\+Textures@{get\+Textures}}
+\index{get\+Textures@{get\+Textures}!Game\+Module@{Game\+Module}}
+\subsubsection{\texorpdfstring{get\+Textures()}{getTextures()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ Game\+Module\+::get\+Textures (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Get textures from the game. 
+
+Get all textures used in the game
+
+\begin{DoxyReturn}{Returns}
+A std\+::vector$<$std\+::string$>$ containing all textures 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\+Game\+Module/Game\+Module.\+hpp\item 
+core/\+Game\+Module/Game\+Module.\+cpp\end{DoxyCompactItemize}

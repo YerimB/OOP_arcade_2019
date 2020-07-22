@@ -1,0 +1,64 @@
+\hypertarget{class_manager}{}\section{Manager Class Reference}
+\label{class_manager}\index{Manager@{Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_manager_a72554004e4ab55571d9907455de28656}{Manager} (const std\+::string \&default\+Lib)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_manager}{Manager} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_manager_a15d49cb59cbcd720e172ee0c6259e7d0}\label{class_manager_a15d49cb59cbcd720e172ee0c6259e7d0}} 
+void {\bfseries Change\+Library} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_manager_aac988fe1a7a4cca17c0933d4ae5fffb4}\label{class_manager_aac988fe1a7a4cca17c0933d4ae5fffb4}} 
+void \hyperlink{class_manager_aac988fe1a7a4cca17c0933d4ae5fffb4}{Execute\+Instructions} (void)
+\begin{DoxyCompactList}\small\item\em Execute game\textquotesingle{}s instruction Get instruction from the game, parse and execute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_manager_aeaea2e0414fef6b4bede43e7c9680840}\label{class_manager_aeaea2e0414fef6b4bede43e7c9680840}} 
+void \hyperlink{class_manager_aeaea2e0414fef6b4bede43e7c9680840}{Load\+Textures} (void)
+\begin{DoxyCompactList}\small\item\em Load texures of the loaded game. \end{DoxyCompactList}\item 
+\hyperlink{class_i_graphics}{I\+Graphics} \& \hyperlink{class_manager_a8cb265f0bd19351a88df4c167ece1377}{Get\+Instance} (void)
+\begin{DoxyCompactList}\small\item\em Get the instance of the current graphical library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_manager_a38a6ba7243dc9aa08922d77509141f8e}\label{class_manager_a38a6ba7243dc9aa08922d77509141f8e}} 
+void {\bfseries update\+Score} (std\+::string score)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_manager_a72554004e4ab55571d9907455de28656}\label{class_manager_a72554004e4ab55571d9907455de28656}} 
+\index{Manager@{Manager}!Manager@{Manager}}
+\index{Manager@{Manager}!Manager@{Manager}}
+\subsubsection{\texorpdfstring{Manager()}{Manager()}}
+{\footnotesize\ttfamily Manager\+::\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{default\+Lib }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_manager}{Manager} constructor. 
+
+Initialize core manager. Load all graphical libraries from lib/ folder Initialize the \begin{DoxyParagraph}{default\+Lib}
+
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Returns}
+New instance of \hyperlink{class_manager}{Manager} 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_manager_a8cb265f0bd19351a88df4c167ece1377}\label{class_manager_a8cb265f0bd19351a88df4c167ece1377}} 
+\index{Manager@{Manager}!Get\+Instance@{Get\+Instance}}
+\index{Get\+Instance@{Get\+Instance}!Manager@{Manager}}
+\subsubsection{\texorpdfstring{Get\+Instance()}{GetInstance()}}
+{\footnotesize\ttfamily \hyperlink{class_i_graphics}{I\+Graphics} \& Manager\+::\+Get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the instance of the current graphical library. 
+
+If {\ttfamily \hyperlink{class_manager_a8cb265f0bd19351a88df4c167ece1377}{Get\+Instance()}} from \hyperlink{class_d_l_loader}{D\+L\+Loader} fail, an \hyperlink{class_arcade_exception}{Arcade\+Exception} is thrown and the program exit.
+
+\begin{DoxyReturn}{Returns}
+A reference to a graphical library 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\+D\+L\+Loader/Manager.\+hpp\item 
+core/\+D\+L\+Loader/Manager.\+cpp\end{DoxyCompactItemize}

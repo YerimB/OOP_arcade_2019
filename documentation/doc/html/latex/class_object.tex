@@ -1,0 +1,113 @@
+\hypertarget{class_object}{}\section{Object Class Reference}
+\label{class_object}\index{Object@{Object}}
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_object_a9bb8746e3c466dae7df7f8745e548b41}\label{class_object_a9bb8746e3c466dae7df7f8745e548b41}} 
+enum {\bfseries Cam\+Enum} \{ \newline
+{\bfseries P\+O\+S\+\_\+X}, 
+{\bfseries P\+O\+S\+\_\+Y}, 
+{\bfseries P\+O\+S\+\_\+Z}, 
+{\bfseries R\+O\+T\+\_\+X}, 
+\newline
+{\bfseries R\+O\+T\+\_\+Y}, 
+{\bfseries R\+O\+T\+\_\+Z}, 
+{\bfseries S\+C\+A\+L\+E\+\_\+X}, 
+{\bfseries S\+C\+A\+L\+E\+\_\+Y}, 
+\newline
+{\bfseries S\+C\+A\+L\+E\+\_\+Z}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_object_a762153e3524db0b2eb74dbe71a346320}\label{class_object_a762153e3524db0b2eb74dbe71a346320}} 
+{\bfseries Object} (const glm\+::vec3 \&position=glm\+::vec3(0.\+0f, 0.\+0f, 0.\+0f), const glm\+::vec3 \&rotation=glm\+::vec3(0.\+0f, 0.\+0f, 0.\+0f), const glm\+::vec3 \&scalation=glm\+::vec3(1.\+0f, 1.\+0f, 1.\+0f))
+\item 
+\mbox{\Hypertarget{class_object_accca66b4eaf6fabfcc30335b5b61c2b0}\label{class_object_accca66b4eaf6fabfcc30335b5b61c2b0}} 
+void {\bfseries set\+V\+BO} (const uint \&vbo, const uint \&vertice\+Nb)
+\item 
+\mbox{\Hypertarget{class_object_a146f845664b3c1597fc38f9ec96e213a}\label{class_object_a146f845664b3c1597fc38f9ec96e213a}} 
+void {\bfseries set\+E\+BO} (const uint \&ebo, const uint \&indice\+Nb)
+\item 
+\mbox{\Hypertarget{class_object_a9fdaca6f7c488ab33ac13e87bd592c73}\label{class_object_a9fdaca6f7c488ab33ac13e87bd592c73}} 
+void {\bfseries set\+V\+AO} (const uint \&vao)
+\item 
+\mbox{\Hypertarget{class_object_a8fd0f444323745a0e2ac7d93a5bfebd8}\label{class_object_a8fd0f444323745a0e2ac7d93a5bfebd8}} 
+uint {\bfseries get\+V\+BO} (void) const
+\item 
+\mbox{\Hypertarget{class_object_aac91fcf10fe0becb8951b135c93c566a}\label{class_object_aac91fcf10fe0becb8951b135c93c566a}} 
+uint {\bfseries get\+E\+BO} (void) const
+\item 
+\mbox{\Hypertarget{class_object_abb81a00502ed4444ac27bb3851bfee8a}\label{class_object_abb81a00502ed4444ac27bb3851bfee8a}} 
+uint {\bfseries get\+V\+AO} (void) const
+\item 
+\mbox{\Hypertarget{class_object_ab0bb4f22fd1dbf20a2ae8c6755b683a3}\label{class_object_ab0bb4f22fd1dbf20a2ae8c6755b683a3}} 
+const \hyperlink{class_shader}{Shader} \& {\bfseries get\+Shader} (void)
+\item 
+\mbox{\Hypertarget{class_object_a6af4ee5d88817a5d136a64c6b1601a18}\label{class_object_a6af4ee5d88817a5d136a64c6b1601a18}} 
+void {\bfseries set\+Vertices} (const float $\ast$array, uint array\+Size, G\+Lenum draw\+Type)
+\item 
+\mbox{\Hypertarget{class_object_a57a89e83099e91a5e33316dfdc37bd95}\label{class_object_a57a89e83099e91a5e33316dfdc37bd95}} 
+void {\bfseries set\+Vertices} (const std\+::vector$<$ float $>$ \&array, G\+Lenum draw\+Type)
+\item 
+\mbox{\Hypertarget{class_object_a84e6b296710f817596fa8ff7ad09d6ef}\label{class_object_a84e6b296710f817596fa8ff7ad09d6ef}} 
+void {\bfseries set\+Indices} (const uint $\ast$array, uint array\+Size, G\+Lenum draw\+Type)
+\item 
+\mbox{\Hypertarget{class_object_a93b4e7330b5ccf3355fd53e202f5127c}\label{class_object_a93b4e7330b5ccf3355fd53e202f5127c}} 
+void {\bfseries set\+Indices} (const std\+::vector$<$ uint $>$ \&array, G\+Lenum draw\+Type)
+\item 
+\mbox{\Hypertarget{class_object_ace74c7c5c63465778a46208f3f8aa708}\label{class_object_ace74c7c5c63465778a46208f3f8aa708}} 
+void {\bfseries set\+Shader} (const \hyperlink{class_shader}{Shader} \&shader, const glm\+::mat4 \&projection\+Matrix)
+\item 
+\mbox{\Hypertarget{class_object_af1040cb216f7ca9db4c9578438949765}\label{class_object_af1040cb216f7ca9db4c9578438949765}} 
+void {\bfseries set\+Texture} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_texture}{Texture} $>$ texture)
+\item 
+\mbox{\Hypertarget{class_object_a15a01f840e0d23dcb531dc3e11db48c8}\label{class_object_a15a01f840e0d23dcb531dc3e11db48c8}} 
+void {\bfseries draw} (G\+Lenum draw\+Mode, const glm\+::mat4 \&projection\+Matrix, const \hyperlink{class_camera}{Camera} \&c)
+\item 
+\mbox{\Hypertarget{class_object_ac9ec1252fbc5ed5f0e939327c49502df}\label{class_object_ac9ec1252fbc5ed5f0e939327c49502df}} 
+void {\bfseries set\+View\+Matrix} (const glm\+::mat4 \&view\+Matrix)
+\item 
+\mbox{\Hypertarget{class_object_add03115634ae6d9b2e7b3f60b7e18fb7}\label{class_object_add03115634ae6d9b2e7b3f60b7e18fb7}} 
+void {\bfseries set\+Translate} (void)
+\item 
+\mbox{\Hypertarget{class_object_a47499992846ea51d38c619ed8198692d}\label{class_object_a47499992846ea51d38c619ed8198692d}} 
+void {\bfseries set\+Scale} (void)
+\item 
+\mbox{\Hypertarget{class_object_ae938828b5b801c7240f960612355eb0f}\label{class_object_ae938828b5b801c7240f960612355eb0f}} 
+void {\bfseries set\+Rotate} (void)
+\item 
+\mbox{\Hypertarget{class_object_a05e1a120de109beb5bdd57dd137b1689}\label{class_object_a05e1a120de109beb5bdd57dd137b1689}} 
+void {\bfseries set\+Position} (const glm\+::vec3 \&position)
+\item 
+\mbox{\Hypertarget{class_object_a5211444ea1b8e56ad9d6727d00c69f33}\label{class_object_a5211444ea1b8e56ad9d6727d00c69f33}} 
+void {\bfseries set\+Scalation} (const glm\+::vec3 \&scalation)
+\item 
+\mbox{\Hypertarget{class_object_aea32ce3191fdae2dd8d89573a0bbc829}\label{class_object_aea32ce3191fdae2dd8d89573a0bbc829}} 
+void {\bfseries set\+Rotation} (const glm\+::vec3 \&rotation)
+\item 
+\mbox{\Hypertarget{class_object_ad0f8e3212f78eede8a6bca2177154b72}\label{class_object_ad0f8e3212f78eede8a6bca2177154b72}} 
+void {\bfseries move} (const Cam\+Enum \&axe, const float \&distance)
+\item 
+\mbox{\Hypertarget{class_object_ad88f29fe3f7e8cf661156291c1a7f607}\label{class_object_ad88f29fe3f7e8cf661156291c1a7f607}} 
+void {\bfseries scale} (const Cam\+Enum \&axe, const float \&strength)
+\item 
+\mbox{\Hypertarget{class_object_a14e4e02ae69334c12bfab9cb47703a02}\label{class_object_a14e4e02ae69334c12bfab9cb47703a02}} 
+void {\bfseries rotate} (const Cam\+Enum \&axe, const float \&degrees)
+\item 
+\mbox{\Hypertarget{class_object_a1688d829b96ed8374dbc619b47b5dfcc}\label{class_object_a1688d829b96ed8374dbc619b47b5dfcc}} 
+void {\bfseries actualize\+Transform} (const glm\+::mat4 \&projection\+Matrix)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Open\+G\+L/classes/Object.\+hpp\item 
+lib/\+Open\+G\+L/classes/Object.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_a10b22bc796e45c0dd2518cce238f4878}\label{class_camera_a10b22bc796e45c0dd2518cce238f4878}} 
+enum {\bfseries Cam\+Enum} \{ \newline
+{\bfseries F\+R\+O\+NT}, 
+{\bfseries B\+A\+CK}, 
+{\bfseries R\+I\+G\+HT}, 
+{\bfseries L\+E\+FT}, 
+\newline
+{\bfseries UP}, 
+{\bfseries D\+O\+WN}, 
+{\bfseries R\+O\+T\+\_\+X}, 
+{\bfseries R\+O\+T\+\_\+Y}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_a93e120c95f48fcc3a317b4dd318368b5}\label{class_camera_a93e120c95f48fcc3a317b4dd318368b5}} 
+{\bfseries Camera} (const glm\+::vec3 \&position=glm\+::vec3(0.\+0f, 0.\+0f, 0.\+0f), const glm\+::vec3 \&rotation=glm\+::vec3(0.\+0f, 0.\+0f, 0.\+0f))
+\item 
+\mbox{\Hypertarget{class_camera_abf048471bef22e204b5d897c46503abf}\label{class_camera_abf048471bef22e204b5d897c46503abf}} 
+void {\bfseries update\+View} (void)
+\item 
+\mbox{\Hypertarget{class_camera_a9a041ae11fa64b5edd843e0a98f8bebc}\label{class_camera_a9a041ae11fa64b5edd843e0a98f8bebc}} 
+const glm\+::mat4 \& {\bfseries get\+View\+Matrix} (void) const
+\item 
+\mbox{\Hypertarget{class_camera_a07cf0b0b59c54d768e288f9b8290db51}\label{class_camera_a07cf0b0b59c54d768e288f9b8290db51}} 
+const glm\+::vec3 \& {\bfseries get\+Front} (void) const
+\item 
+\mbox{\Hypertarget{class_camera_ace0d7f4531021d311c9adba9d085915c}\label{class_camera_ace0d7f4531021d311c9adba9d085915c}} 
+const glm\+::vec3 \& {\bfseries get\+Top} (void) const
+\item 
+\mbox{\Hypertarget{class_camera_a9f3ce98d151484af91ae5281e517753e}\label{class_camera_a9f3ce98d151484af91ae5281e517753e}} 
+const float {\bfseries get\+Delta\+Time} (void)
+\item 
+\mbox{\Hypertarget{class_camera_a6c80882e87be75bde67f432ca3b21607}\label{class_camera_a6c80882e87be75bde67f432ca3b21607}} 
+void {\bfseries set\+Position} (const glm\+::vec3 \&position)
+\item 
+\mbox{\Hypertarget{class_camera_afb765b3e938107102cc855ff5dde2248}\label{class_camera_afb765b3e938107102cc855ff5dde2248}} 
+void {\bfseries set\+Rotation} (const glm\+::vec3 \&rotation)
+\item 
+\mbox{\Hypertarget{class_camera_a4e1d6d8c4640a37cbdc93cf03c8ead42}\label{class_camera_a4e1d6d8c4640a37cbdc93cf03c8ead42}} 
+void {\bfseries translate\+Camera} (const glm\+::vec3 \&translation)
+\item 
+\mbox{\Hypertarget{class_camera_ac37e0a9bc966151c94607a4ef57f750a}\label{class_camera_ac37e0a9bc966151c94607a4ef57f750a}} 
+void {\bfseries rotate\+Camera} (const glm\+::vec3 \&rotation)
+\item 
+\mbox{\Hypertarget{class_camera_a5a3b649297187b0cb38256dd193df84e}\label{class_camera_a5a3b649297187b0cb38256dd193df84e}} 
+void {\bfseries move} (const Cam\+Enum \&direction, const float \&speed)
+\item 
+\mbox{\Hypertarget{class_camera_a1fcaf262ca8a781b8a43ae8243ef7a12}\label{class_camera_a1fcaf262ca8a781b8a43ae8243ef7a12}} 
+void {\bfseries rotate} (const Cam\+Enum \&axis, const float \&angle)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Open\+G\+L/classes/Camera.\+hpp\item 
+lib/\+Open\+G\+L/classes/Camera.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\hypertarget{class_apple}{}\section{Apple Class Reference}
+\label{class_apple}\index{Apple@{Apple}}
+
+
+Inheritance diagram for Apple\+:
+% FIG 0
+
+
+Collaboration diagram for Apple\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_apple_af4e679170655408240a317e099f3e1d6}\label{class_apple_af4e679170655408240a317e099f3e1d6}} 
+{\bfseries Apple} (\hyperlink{struct_vector2}{Vector2}$<$ int $>$ pos)
+\item 
+\mbox{\Hypertarget{class_apple_ad996f13370cbc05c25b60aa870f2aa66}\label{class_apple_ad996f13370cbc05c25b60aa870f2aa66}} 
+\hyperlink{struct_vector2}{Vector2}$<$ int $>$ {\bfseries get\+Position} ()
+\item 
+\mbox{\Hypertarget{class_apple_a394bd2a13137cb232187d1952e100418}\label{class_apple_a394bd2a13137cb232187d1952e100418}} 
+std\+::string {\bfseries get\+Name} ()
+\item 
+\mbox{\Hypertarget{class_apple_a5a31a10338aa5da199b4bfa91094b15a}\label{class_apple_a5a31a10338aa5da199b4bfa91094b15a}} 
+std\+::string {\bfseries get\+Color} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+games/\+Pac\+Man/Apple.\+hpp\item 
+games/\+Pac\+Man/Apple.\+cpp\end{DoxyCompactItemize}

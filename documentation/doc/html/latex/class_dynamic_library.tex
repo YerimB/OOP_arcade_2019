@@ -1,0 +1,92 @@
+\hypertarget{class_dynamic_library}{}\section{Dynamic\+Library Class Reference}
+\label{class_dynamic_library}\index{Dynamic\+Library@{Dynamic\+Library}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dynamic_library_afb8f6e78a2a72fb58501f4d1fb38ad3f}\label{class_dynamic_library_afb8f6e78a2a72fb58501f4d1fb38ad3f}} 
+enum {\bfseries Library\+Type} \{ {\bfseries Graphic}, 
+{\bfseries Game}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_dynamic_library_afa5c94973f70976c400dd3caeafc6022}{Open} (const std\+::string \&file, const int \&flags)
+\begin{DoxyCompactList}\small\item\em Open a Dynamic Library. \end{DoxyCompactList}\item 
+const std\+::size\+\_\+t \hyperlink{class_dynamic_library_adb3b9207f5fcd9f00694af48a7e45cc9}{Close} (void $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Close a Dynamic Library using {\ttfamily dlclose()} \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_dynamic_library_a7be5e4717bd16b25d6ddfde33941409c}{Get\+Symbol} (void $\ast$handle, const std\+::string \&symbol)
+\begin{DoxyCompactList}\small\item\em Get a symbol from a Dynamic Library using {\ttfamily dlsym()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dynamic_library_adb3b9207f5fcd9f00694af48a7e45cc9}\label{class_dynamic_library_adb3b9207f5fcd9f00694af48a7e45cc9}} 
+\index{Dynamic\+Library@{Dynamic\+Library}!Close@{Close}}
+\index{Close@{Close}!Dynamic\+Library@{Dynamic\+Library}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily const std\+::size\+\_\+t Dynamic\+Library\+::\+Close (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Close a Dynamic Library using {\ttfamily dlclose()} 
+
+Close a Dynamic Library using {\ttfamily dlclose()} If {\ttfamily dlclose()} fail, a \hyperlink{class_d_l_exception}{D\+L\+Exception} is thrown. The error message contains {\ttfamily dlerror()} information
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & A handle to a Dynamic Library\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if handle is null, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dynamic_library_a7be5e4717bd16b25d6ddfde33941409c}\label{class_dynamic_library_a7be5e4717bd16b25d6ddfde33941409c}} 
+\index{Dynamic\+Library@{Dynamic\+Library}!Get\+Symbol@{Get\+Symbol}}
+\index{Get\+Symbol@{Get\+Symbol}!Dynamic\+Library@{Dynamic\+Library}}
+\subsubsection{\texorpdfstring{Get\+Symbol()}{GetSymbol()}}
+{\footnotesize\ttfamily void $\ast$ Dynamic\+Library\+::\+Get\+Symbol (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const std\+::string \&}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Get a symbol from a Dynamic Library using {\ttfamily dlsym()} 
+
+Get a pointer to a function of the Dynamic Library
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & A handle to a Dynamic Library \\
+\hline
+{\em symbol} & Function name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dynamic_library_afa5c94973f70976c400dd3caeafc6022}\label{class_dynamic_library_afa5c94973f70976c400dd3caeafc6022}} 
+\index{Dynamic\+Library@{Dynamic\+Library}!Open@{Open}}
+\index{Open@{Open}!Dynamic\+Library@{Dynamic\+Library}}
+\subsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void $\ast$ Dynamic\+Library\+::\+Open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const int \&}]{flags }\end{DoxyParamCaption})}
+
+
+
+Open a Dynamic Library. 
+
+Open a Dynamic Library using {\ttfamily dlopen()} If {\ttfamily dlopen()} fail, a \hyperlink{class_d_l_exception}{D\+L\+Exception} is thrown. The error message contains {\ttfamily dlerror()} information
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Path to .so file \\
+\hline
+{\em flags} & Flags to use with {\ttfamily dlopen()}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the beginning of the Dynamic Library 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\+Dynamic\+Library/Dynamic\+Library.\+hpp\item 
+core/\+Dynamic\+Library/Dynamic\+Library.\+cpp\end{DoxyCompactItemize}
